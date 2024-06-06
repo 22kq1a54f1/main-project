@@ -1,0 +1,44 @@
+<html><head>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  padding-top: 100px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    background-color: rgba(188, 246, 255, 0.5); /* Semi-transparent background */
+    padding: 10px 10px;
+    box-sizing: border-box;
+    z-index: 999; /* Ensure navbar is above the video */
+    color: #fff; /* Text color */
+  }
+
+
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <h1><marquee direction="right">SHOP MORE FOR MORE OFFERS</marquee></h1>
+<p><video autoplay muted loop id="myVideo">
+        <source src="oP1.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video></p>
+    </div>
+</body>

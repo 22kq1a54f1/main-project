@@ -1,0 +1,93 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video with Text Overlay</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+}
+
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+
+}
+video {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding-top: 0%;
+    top: 0px;
+    width: 500px;
+    padding-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <p><video autoplay muted loop id="myVideo">
+            <source src="paymentVideo1.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video></p>
+        <div class="text-overlay" id="textOverlay">   <center><form action="orderPlaced.html" method="post">
+            <h1>Payment Details</h1>
+            <label for="card_number">Card Number:</label>
+            <input type="text" id="card_number" name="card_number" required><br><br>
+            
+            <label for="expiry_date">Expiry Date:</label>
+            <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YYYY" required><br><br>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required><br><br>
+            
+            <label for="name_on_card">Name on Card:</label>
+            <input type="text" id="name_on_card" name="name_on_card" required><br><br>
+    
+            
+            <h2>Delivery Options</h2>
+            <input type="radio" id="express" name="delivery" value="express">
+            <label for="express">Express Delivery (1-2 days)</label><br>
+            
+            <input type="radio" id="standard" name="delivery" value="standard" >
+            <label for="standard">Standard Delivery (3-5 days)</label><br>
+            
+            <input type="radio" id="express" name="delivery" value="express">
+            <label for="express">Express Delivery (1-2 days)</label><br>
+            
+            <input type="radio" id="pickup" name="delivery" value="pickup">
+            <label for="pickup">In-store Pickup</label><br><br>
+            
+            <label for="shipping_address">Shipping Address:</label>
+            <textarea id="shipping_address" name="shipping_address" required></textarea><br><br>
+            
+            <input type="submit" value="Place Order"></center> 
+        </form></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>UI PAGES</title>
+        <style>
+            body{
+              background-image: url('log.avif');
+              background-repeat:no repeat;
+              background-size:cover;
+            }
+            .container {
+  position: absolute;
+  left:400;
+  
+  margin: 20px;
+  max-width: 400px;
+  height: 300px;
+padding-right: 90px;
+  padding: 20px;
+  background-color: rgba(255, 248, 188, 0.5);}
+            p{
+                padding-left: 100;
+              padding-top: 100;
+            }
+            nav ul{
+                padding: 40px;
+                color: rgb(rgb(245, 8, 107), rgb(40, 223, 40), rgb(255, 0, 200));
+            }
+            
+    
+            nav ul li{
+                display: inline;
+                margin-right: 20px;
+            }
+            p1{
+                color: rgb(14, 14, 214);
+                font-size: 40px;
+                margin-right:40px ;
+            }
+            p2{
+              font-size: 60px;
+              color: rgb(236, 21, 21);
+        
+            }
+            </style>
+                  <script>
+                    // User Validations
+            function loginValidation() {
+                        // Ramesh
+              var uname = document.x.username.value;
+                         //Ramesh@123
+              var password = document.x.password.value;
+                        if(uname==null || uname=="") {
+                          alert("Name cant be blank")
+                          return false;  
+                       } else if (password.length<6){
+                          alert("Password Must be 6 letters")
+                          return false;
+                       }  
+                       return true                 
+                    }           
+                 </script>
+    </head>
+    <body>
+
+      <header>
+        <nav>
+           <ul>
+           <center> <li><a href="./homePage.html"><p1>HOME</p1></a></li>
+            <li><a href="./Reg.html"><p1>REGISTER</p1></a></li>
+               <li><a href="./signup.html"><p1>LOGIN</p1></a></li>
+                <li><a href="./contactus.html"><p1>CONTACT</p1></a></li>
+                <li><a href="./about.html"><p1>ABOUT US</p1></a></li> </center>
+                   
+           </ul>
+        </nav>
+       </header>
+        
+      <center>
+        <form name="x" action="LoginSuccess.html" 	onsubmit="return loginValidation(this)" class="container">
+        <div style="padding-bottom: 18px;"><span style="color: rgb(8, 2, 3);"> <p2>User Name</p2></span><br/>
+   <p2> <input type="text" name="username" placeholder="User Name" autofocus> <br></div>
+    <div style="padding-bottom: 18px;"><span style="color: rgb(13, 8, 8);"> <p2>Password</p2></span><br/>
+ <input type="password" name="password" placeholder="Password"> <br>
+ <div style="padding-bottom: 18px;"><span style="color: rgb(8, 2, 3);"></span><br/></div>
+                 <input type="submit" value="LOGIN">     </div>
+                  
+                </form></center> 
+    </body>
+</html>

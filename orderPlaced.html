@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Overlay on Video</title>
+<style>
+    #video-container {
+        position: relative;
+    }
+
+    #video {
+        width: 100%;
+    }
+    #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  padding-top: 100px;
+}
+
+    #text-overlay {
+        position: absolute;
+        padding-top: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(62, 234, 10);
+        font-size: 40px;
+        font-family: Arial, sans-serif;
+    }
+    h2{
+               text-shadow:  5px 5px 10px  red ,10px 10px 20px yellow;
+               
+              }
+</style>
+</head>
+<body>
+<div id="video-container">
+  <video autoplay muted loop id="myVideo">
+        <source src="oP1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="text-overlay">
+      <marquee direction="up"><h2>ORDER CONFIRMED</h2></marquee>
+    </div>
+</div>
+</body>
+</html>
+
