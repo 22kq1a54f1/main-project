@@ -1,129 +1,148 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>HOME PAGE</title>
-        <style>
-            body {
-                background-image: url('homeee.jpg');
-                background-repeat: no-repeat;
-                background-size:cover;
-            }
-            p2{
-                align-content: center;
-            }
-           
-            h1{
-                text-align: center:
-            }
-            h2{
-                text-align: center;
-                color: rgb(222, 36, 107);
-                font-size: 60px;
-            }
-            nav ul{
-                padding: 40px;
-                color: red;
-            }
-            
-    
-            nav ul li{
-                display: inline;
-                margin-right: 20px;
-            }
-
-            p1{
-                color: rgb(214, 14, 47);
-                font-size: 40px;
-                margin-right: 20px;
-            }
-            .container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-}
-
-.container img {
-  width: 100%;
-  height: auto;
-}
-
-.container .btn {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #096999;
-  color: rgb(7, 7, 7);
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: end;
-}
-            .image-container {
-    display: flex;
-    flex-direction: column; /* Arranges images vertically */
-    align-items: center; /* Centers images horizontally */
-  
-  }
-
-            </style>
-
-    <body>
-        <header>
-       
-            <nav>
-                  <ul>
-                      
-                    <center><li><a href="file:///C:\Users\91949\Desktop\MyProject\homePage.html"><p1>HOME</p1></a></li>
-                      
-                         <li><a href="file:///C:\Users\91949\Desktop\MyProject\Reg.html"><p1>REGISTER</p1></a></li> 
-                         <li><a href="file:///C:\Users\91949\Desktop\MyProject\signup.html"><p1>LOGIN</p1></a></li>
-                          <li><a href="file:///C:/Users/91949/Desktop/EINS/contactus.html"><p1>CONTACT</p1></a></li>
-                          <li><a href="file:///C:/Users/91949/Desktop/EINS/contactus.html"><p1>ABOUT US</p1></a></li>
-                      </center>  
-                          
-                  </ul>
-               </nav>   
-              </header>
+<head>
+    <title>HOME PAGE</title>
+    <style>
+        body {
+            background-image: url('homeee.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            =
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: rgb(21, 21, 21);
+            text-decoration: none;
+            font-size: 30px;
+            padding: 10px 20px;
+        }
+        nav ul li a:hover {
+            background-color: rgba(9, 9, 9, 0.2);
+            border-radius: 5px;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px; /* Adjusted to ensure images are not hidden under the nav bar */
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+        .container .btn {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #096999;
+            color: #fae9b1;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        #mySidenav a {
+            position: absolute;
+            left: -80px;
+            transition: 0.3s;
+            padding: 15px;
+            width: 100px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            padding-top: 20px;
+        }
+        #mySidenav a:hover {
+            left: 0;
         
+        }
+        #about {
+            top: 20px;
+            background-color: #0a0a0a;
+        }
+        #blog {
+            top: 80px;
+            background-color: #0a0c0e;
+        }
+        #projects {
+            top: 140px;
+            background-color: #0c0a0a;
+        }
+        #contact {
+            top: 200px;
+            background-color: #0d0c0c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Kids.html">KIDS</a></li>
+                <li><a href="Mens.html">MENS</a></li>
+                <li><a href="Womens.html">WOMENS</a></li>
+            
+            </ul>
+        </nav>
+    </header>
 
-    
+    <div id="mySidenav" class="sidenav">
+        <a href="Reg.html" id="about">Register</a>
+        <a href="signup.html" id="blog">Login</a>
+        <a href="contactus.html" id="projects">Contact us</a>
+        <a href="About.html" id="contact">About us</a>
+    </div>
 
-                
-           <div class="image-container">
-    
-            <div class="container">
-                <img src="kids.jpg" alt="Image1" style="width:100%">
-                <form action="C:\Users\91949\Desktop\MyProject\Kids.html">
-                <button class="btn"  >KIDS WARE</button></form>
-    
-
-          </div>
-
-          <div class="image-container">
-    
-            <div class="container">
-                <img src="mens5.jpg" alt="Image1" style="width:100%">
-                <form action="C:\Users\91949\Desktop\MyProject\Mens.html">
-                    <button class="btn"  >MENS WARE</button></form>
-              </div>
-              
-          </div>
-          <div class="image-container">
-    
-            <div class="container">
-                <img src="womens1.avif" alt="Image1" style="width:100%">
-                <form action="C:\Users\91949\Desktop\MyProject\Womens.html">
-                    <button class="btn"  >WOMENS WARE</button></form>
-              </div>
-              
-          </div>
-          
-
+    <div class="image-container">
+        <div class="container">
+            <img src="kids.jpg" alt="Image1" style="width:100%">
+            <form action="C:\Users\91949\Desktop\MyProject\Kids.html">
+                <button class="btn">KIDS WARE</button>
+            </form>
         </div>
 
-    </body>
-    
+        <div class="container">
+            <img src="mens5.jpg" alt="Image2" style="width:100%">
+            <form action="C:\Users\91949\Desktop\MyProject\Mens.html">
+                <button class="btn">MENS WARE</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <img src="womens1.avif" alt="Image3" style="width:100%">
+            <form action="C:\Users\91949\Desktop\MyProject\Womens.html">
+                <button class="btn">WOMENS WARE</button>
+            </form>
+        </div>
+    </div>
+</body>
 </html>

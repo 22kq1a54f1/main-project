@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +12,6 @@
             background-image: url('t&c.jpg');
             background-repeat: no-repeat;
             background-size: cover;
-            
         }
         .container {
             max-width: 800px;
@@ -32,20 +32,29 @@
             margin-bottom: 20px;
         }
         .container .btn {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #096999;
-  color: rgb(7, 7, 7);
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: end;
-}
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #096999;
+            color: rgb(7, 7, 7);
+            font-size: 16px;
+            padding: 2px 4px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: end;
+        }
+        input[type="submit"] {
+            background-color: #096999;
+            color: rgb(7, 7, 7);
+            font-size: 20px; /* Increased font size */
+            padding: 20px 40px; /* Increased padding */
+            border: none;
+            cursor: pointer;
+            border-radius: 2px;
+        }
     </style>
 </head>
 <body>
@@ -56,17 +65,18 @@
             <h2>Introduction</h2>
             <p>Welcome to our online clothing store. These terms and conditions outline the rules and regulations for the use of our website...</p>
             <!-- Add your terms and conditions text here -->
+             <h1>PART A – TERMS AND CONDITIONS FOR USAGE OF THE PLATFORMS</h1>
+            <p>1. GENERAL</p>
+            <p>1.1 The terms and conditions for usage of the Platforms as set out herein (“Terms of Use”) specifically govern your access and use of the Platforms, which provides a forum for you to inter alia discover, select and buy Products listed on the Platforms at the indicated price at any time, from the locations serviceable by us.</p>
+            <p>1.2 Please note that we may from time to time, modify the Terms of Use that govern your use of the Platforms. Every time you wish to use our Platforms, please check these Terms of Use to ensure that you understand the terms and conditions that apply at that time. Further, please note that we reserve the right to either change the format and the content of the Platforms or suspend the operation of the Platforms for support or maintenance work, in order to update the content or for any other reason, at any time.</p>
         </div>
 
         <form action="Shoppy.html" "checkboxForm" onsubmit="return validateForm()">
             <label>
               <input type="checkbox" name="interest" value="coding"> Accept here!!!
             </label><br>
-        
-
-        
-            <input type="submit" value="Continue">
-          </form>
+           <center><input type="submit" value="Continue"></center> 
+        </form>
         
     </div>
 
@@ -84,12 +94,12 @@
     
           // Check if at least one checkbox is checked
           if (checkedCount === 0) {
-            alert("Please select at least one interest.");
+            alert("Accept the terms and conditions for better shopping.");
             return false;
           }
     
           return true;
         }
-      </script>
+    </script>
 </body>
 </html>

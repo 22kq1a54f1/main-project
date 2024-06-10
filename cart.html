@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        padding-top: 50px;
+        background-image: url(bg5.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
+    .cart-container {
+        width: 80%;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+    .cart-item img {
+        width: 100px;
+        height: auto;
+    }
+    .cart-item-details {
+        flex: 1;
+        padding: 0 20px;
+    }
+    .cart-item-price,
+    .cart-item-quantity {
+        width: 100px;
+        text-align: center;
+    }
+    .cart-item-remove {
+        cursor: pointer;
+        color: red;
+    }
+    .cart-total {
+        text-align: right;
+        font-size: 18px;
+        padding: 10px 0;
+    }
+</style>
+</head>
+<body>
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total" id="cart-total"></div>
+        <center><form method="post" action="Paymentpage.html">
+            <input name="skip_Submit" value="Checkout" type="submit" />
+        </form></center>
+    </div>
+
+    <script>
+        function loadCart() {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            var cartItems = document.getElementById('cart-items');
+            var cartTotal = document.getElementById('cart-total');
+            cartItems.innerHTML = '';
+            var total = 0;
+
+            cart.forEach(function(item, index) {
+                var cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-details">
+                        <p>${item.name}</p>
+                        <p>Size: ${item.size}</p>
+                    </div>
+                    <div class="cart-item-price">${item.price}/-</div>
+                    <div class="cart-item-quantity">
+                        <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
+                    </div>
+                    <div class="cart-item-remove" onclick="removeFromCart(${index})">Remove</div>
+                `;
+
+                cartItems.appendChild(cartItem);
+                total += item.price * item.quantity;
+            });
+
+            cartTotal.innerHTML = `Total: ${total}/-`;
+        }
+
+        function updateQuantity(index, quantity) {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart[index].quantity = parseInt(quantity);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        function removeFromCart(index) {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        window.onload = loadCart;
+    </script>
+</body>
+</html>

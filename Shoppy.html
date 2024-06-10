@@ -3,7 +3,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         * {
   box-sizing: border-box;
@@ -53,6 +55,39 @@ body {
             font-size: 40px;
         }
 
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color:rgba(188, 246, 255, 0.5);
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: rgb(10, 7, 189);
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.navbar a:hover {
+
+  -ms-zoom: 10px;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -65,12 +100,11 @@ body {
             <ul>
           
                 
-              <center><li><a href="file:///C:\Users\91949\Desktop\MyProject\homePage.html"><p1>Home</p1></a></li>
-                   <li><a href="file:///C:\Users\91949\Desktop\MyProject\Reg.html"><p1>Register</p1></a></li> 
-                   <li><a href="file:///C:\Users\91949\Desktop\MyProject\signup.html"><p1>Login</p1></a></li>
-                    <li><a href="file:///C:\Users\91949\Desktop\MyProject\contactus.html"><p1>Contact</p1></a></li>
-                    <li><a href="file:///C:\Users\91949\Desktop\MyProject\About.html"><p1>About Us</p1></a></li></center>
-            
+               <a class="active" href="homePage.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+                <a href="Reg.html"><i class='fa fa-fw fa-address-card'></i> Register</a> 
+                <a href="signup.html"><i class="fa fa-fw fa-user"></i> Login</a>
+                <a href="contactus.html"><i class="fa fa-fw fa-phone"></i> Contact</a>
+                <a href="About.html"><i class="fa fa-fw fa-envelope"></i>Aboutus</a>  
                     
             </ul>
 
